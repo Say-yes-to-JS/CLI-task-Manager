@@ -9,6 +9,10 @@ class Priority{
 
     n = "NORMAL";
     u = "URGENT";
+
+    getPriority(){
+        return this.#priority;
+    }
 }
 
 export {Priority}
