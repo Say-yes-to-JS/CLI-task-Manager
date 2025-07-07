@@ -48,6 +48,19 @@ class TaskList{
 
     }
 
+    getOneTask(taskName){
+        try{
+            for(const task of this.taskArray){
+                if(task.getName() === taskName){
+                    return task
+                }
+            }
+            return null;
+        } catch(e){
+            return e.message();
+        }
+    }
+
 }
 
 export {TaskList}

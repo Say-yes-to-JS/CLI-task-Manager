@@ -6,10 +6,14 @@ const dinner = new Task("Dinner", 4);
 dinner.setDdescription("Making pounded yam and egusi for dinner");
 
 const midnight = new Task("Working midnight", 4);
-dinner.setDdescription("Making fake money");
+midnight.setDdescription("Making fake money");
 
 const taskList = new TaskList("chores")
 taskList.addUrgentTask(midnight);
 taskList.addUrgentTask(midnight);
 taskList.addNormalTask(dinner);
-taskList.getAllTask();
+
+const task = taskList.getOneTask("Dinner");
+task.setStatus(false)
+console.log(timeRemining(task.getFinishDate()))
+console.log(task.getStatus());
